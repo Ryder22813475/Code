@@ -1,0 +1,282 @@
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/cwtexyen.css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/headers_rwd.css">
+   <script>
+        window.onload = function() {
+          var subButton = document.getElementById("submit");
+         subButton.onclick = function value(passForm) {
+        
+         }
+        };
+        function value(passForm) {
+              //密碼檢測
+              if (!passForm.pwd.value.match(/\d+/g)) {
+                  alert("密碼至少包含一個數字");
+                  passForm.pwd.focus();
+                  return false;
+              } 
+              if (!passForm.pwd.value.match(/[a-z]/)) {
+                  alert("密碼至少包含一個字母");
+                  passForm.pwd.focus();
+                  return false;
+              }
+              if ((passForm.pwd.value).length < 8) {
+                  alert("密碼至少要八個字");
+                  passForm.pwd.focus();
+                  return false;
+              }
+              if (passForm.pwd.value != passForm.comfirmpwd.value) {
+                  alert("密碼不對等");
+                  passForm.pwd.focus();
+                  return false;
+              }
+        
+              //是否填寫//
+              if (passForm.pwd.value == "") {
+                  alert("請確認您的密碼是否填寫");
+                  passForm.pwd.focus();
+                  return false;
+              }
+              if (passForm.name.value == "") {
+                  alert("請確認您的暱稱是否填寫");
+                  passForm.name.focus();
+                  return false;
+              }
+              if (passForm.email.value == "") {
+                  alert("請確認您的信箱是否填寫");
+                  passForm.email.focus();
+                  return false;
+              }
+              if (passForm.user.value == "") {
+                  alert("請確認您的帳號是否填寫");
+                  passForm.user.focus();
+                  return false;
+              }
+              return true;
+          };
+        </script>
+<style>
+#alert{
+font-size:16px
+}
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family:'cwtexyen' ;
+      }
+body{
+    height: 1600px;
+}
+#mirror{
+  position: relative;
+  width: 40%;
+  height: 1200px;
+  background-color: #51ACDC;
+  top:10%;
+  left: 30%;
+  border-radius: 25px;
+  box-shadow: 10px 5px 5px #778899;
+}
+#unimp{
+    background-color: #b4b5b6;
+    width: 100%;
+    height: 35%;
+    bottom:15%;
+    position: absolute;
+}
+.ab{
+      height: 200px;
+      bottom: -1400px;
+      }
+.ab h1{
+  font-size: 16px;
+}
+#mirror input{
+    width: 60%;
+    height: 5%;
+    background-color: aliceblue;
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
+#unimp input{
+    width: 60%;
+    height: 10%;
+    background-color: aliceblue;
+    margin-bottom: 5%;
+    border-radius: 5px;
+}
+#enter input{
+    width: 10%;
+    height: 10%;
+    border-radius: 5px;
+}
+#inform{
+    width: 15%;
+    right:20%;
+    height:30%;
+  }
+@media screen and  (max-width: 1000px) and (min-width: 768px)  {
+    #mirror{
+        width: 60%;
+        left: 20%;
+    } 
+  #inform{
+    width: 20%;
+    right:20%;
+    height:20%;
+  }
+  #enter input{
+    width: 10%;
+    height: 10%;
+    border-radius: 5px;
+}
+#alert{
+font-size:12px
+}
+}
+@media screen and  (max-width: 768px) and (min-width: 400px)  {
+    #mirror{
+        width: 80%;
+        left: 10%;
+    } 
+    #unimp input{
+        width: 70%;
+    }
+    #mirror input{
+        width: 70%;
+    }
+    #inform{
+    width: 30%;
+    right:10%;
+    height:15%;
+  }
+  #enter input{
+    width: 10%;
+    height: 10%;
+    border-radius: 5px;
+}
+#alert{
+font-size:8px
+}
+}
+@media screen and  (max-width: 400px)  {
+    #mirror{
+        width: 90%;
+        left: 5%;
+    } 
+    #unimp input{
+        width: 80%;
+    }
+    #mirror input{
+        width: 80%;
+    }
+    #inform{
+    width: 30%;
+    right:5%;
+    height:10%;
+  }
+  #enter input{
+    width: 10%;
+    height: 10%;
+    border-radius: 5px;
+}
+#alert{
+font-size:8px
+}
+}
+</style>
+</head>
+<body style="background-color:#86CAF0;"><!--整體-->
+  <div style="position: fixed;width: 100%;z-index: 5;"><!--浮動-->
+  <input type="checkbox" name="" id="menu_control">
+  <div class="header">
+    <label for="menu_control" class="menu_btn">
+      <div id="s0" style="position: absolute;border-radius: 5px;width: 100%;height: 20%;background-color: #A6D9EA;top:0%"></div>
+      <div id="s0" style="position: absolute;border-radius: 5px;width: 100%;height: 20%;background-color: #A6D9EA;top:40%"></div>
+      <div id="s0" style="position: absolute;border-radius: 5px;width: 100%;height: 20%;background-color: #A6D9EA;top:80%"></div>
+    </label>
+          <ul class="nav">
+            <li>
+            <a href="AboutSet.jsp">關於海龜</a>
+            </li>
+            <li>
+            <a href="DataSet.jsp">塑膠危機</a>
+            </li>
+            <li>
+              <a>活動新知</a>
+              <ul>
+                  <li><a href="NewSet.jsp">活動新知</a></li>
+                  <li><a href="ForumSet.jsp">論壇</a></li>
+              </ul>
+            </li>
+            <li>
+            <a href="GroupSet.jsp">公益團體</a>
+            </li>
+            <li>
+            <a href="AssertionID.jsp">會員登入</a>
+            </li>
+          </ul>
+    <div id="link" style="height:100%;position: relative;">
+      <h1 id="L1" class="link" style="height:100%;" onclick="location.href='home.jsp'">首頁&gt;</h1>
+      <h1 id="L2" class="link" style="height:100%;position: relative;right: -100%;top:-100%;" onclick="location.href='signu.html'">註冊</h1></div>
+  </div>
+</div>
+
+<div id="content" style="position:relative;width:100%;height: 1300px;"><!--內容-->
+        <div id="mirror">
+        <div id="inform" style="border-radius: 2.5%;position:fixed;top:15%;background-color: #112942;z-index: 6;">
+        <h2 id="alert" style="color:white">密碼為大小寫英文數字<br>我們將遵守法律，保護您的隱私安全，此資料將不會挪用論壇以外用途</h2>
+        </div>
+        <form action="signu.jsp" name="passForm" method="post" onsubmit="return value (this)">
+            <h1 id="check1" style="position: absolute;left:15%;top:1.5%;height: 10%;">必填資料</h1>
+            <div id="f1" style="width:100%;bottom:50%;position: absolute;height: 45%;">
+            <div style="position: absolute;left:10%;width: 90%;height: 100%;">
+            <h1>帳號 </h1> 
+            <input type="text" name="user"><br>
+            <h1>姓名 </h1> 
+            <input type="text" name="name"><br>
+            <h1>電子郵件 </h1> 
+            <input type="text" name="email"><br>
+            <h1>設定密碼 </h1> 
+            <input type="password" value="" name="pwd" id="password" class="password">
+            <h1>確認密碼</h1> 
+            <input type="password" value="" name="pwdc" id="passwordc" class="passwordc">
+            <div style="position:relative">
+                <input type="checkbox" style="width:10%;height: 4%;" id="chkPasw"><label style="position: relative;top:-10%;" for="chkPasw"><span>顯示密碼</span></label>
+            </div>
+            </div>
+            </div>
+            <div id="unimp">
+                <h1 id="check2" style="position: absolute;left:15%;top:6.5%;height: 10%;">非必填資料</h1>
+                <div id="f2" style="width:100%;height:80%;bottom: 0;position: absolute;left: 10%;">
+                <h1>國家 </h1> 
+                <input type="text" name="country"><br>
+                <h1>地址 </h1> 
+                <input type="text" name="address"><br>
+                <h1>電話 </h1> 
+                <input type="text" name="phone"><br>
+            </div>
+            </div>
+            <div id="enter" style="position:absolute;width:100%;height: 15%;bottom: 0;">
+            <div id="f3" style="width:90%;height:80%;bottom: 10%;position: absolute;left: 10%;">
+            <h2>是否願意收到電子報？</h2><br>
+            <input id="ask-yes" type="radio" name="ask" value="yes">
+            <label for="ask-yes">是</label>
+            <input id="ask-no" type="radio" name="ask" value="no" checked="">
+            <label for="ask-no">否</label>
+            <input style="font-weight: bolder;color:rgb(0, 0, 0);background-color: rgb(255, 255, 255);position: absolute;bottom: 0%;left:0%;height: 25%;width:40%" class="btn" type="submit" value="送出" id="submit" onclick="return value (passForm);">
+        
+    </div>
+        </div></form>
+        </div>
+</div>
+
+
+<script type="text/javascript" src="js/check_data.js"></script>
+<script type="text/javascript" src="js/rwd_header.js"></script>
+</body>

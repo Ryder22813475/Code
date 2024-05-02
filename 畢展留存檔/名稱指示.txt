@@ -1,0 +1,16 @@
+Query ->   ForumSet.jsp
+QueryS ->  ForumSetKey.jsp
+Query1->   ForumSetRs.jsp
+Query2->   ForumSetView.jsp
+Query3->   ForumSetChat.jsp
+QueryK->   ForumSetTakeKeyword.jsp
+QueryWT->  ForumSetWriteText.jsp
+QueryN->   ForumSetKeywordNone.jsp
+Quert4->   ForumSetChatRs.jsp
+QueryT->   ForumSetChatNone.jsp
+Query5->   ForumSetChatView.jsp
+Query6->   ForumSetChatSend.jsp
+Query3.5-> ForumSetReload.jsp
+Check->    ForumSetCheck1.jsp
+Checks->   ForumSetCheck2.jsp
+QueryBB-> ForumSetMemberEdit.jsp
